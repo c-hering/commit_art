@@ -26,8 +26,8 @@ for x in range(0,len(template)):
             os.system('git add *')
             os.system('git commit -m " just making some pixel art :) " ')
             os.system('git push origin master')
-        CURRENT_DATE = datetime.datetime.now()
+        CURRENT_DATE = datetime.datetime.now().day
         while LAST_DATE == CURRENT_DATE:
             # wait 12 hours until checking again
             time.sleep(43200)
-            CURRENT_DATE = datetime.datetime.now()
+            CURRENT_DATE = datetime.datetime.now().day
