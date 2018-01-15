@@ -18,13 +18,13 @@ START_DATE = 14
 LAST_DATE = 14
 CURRENT_DATE = 14
 
-for week in template:
-    for day in week:
-        if(template[week][day] == 1):
+for x in range(0,len(template)):
+    for y in range(0,len(template[x])):
+        if(template[x][y] == 1):
             with open('progress.txt', 'a') as file:
                 file.write('Making a commit on day ' + str(CURRENT_DATE))
             os.system('git add *')
-            os.system('git commit -m \' just making some pixel art :) \' ')
+            os.system('git commit -m " just making some pixel art :) " ')
             os.system('git push origin master')
         CURRENT_DATE = datetime.datetime.now()
         while LAST_DATE == CURRENT_DATE:
